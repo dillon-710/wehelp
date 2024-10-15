@@ -1,0 +1,153 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+            <meta charset="utf-8">
+            <title>text</title>
+            <style>
+                body{
+                    background: url(pexels-ifreestock-585752.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    margin:0;
+                    
+                }
+                .logo{
+                    width: 50px;
+                    height: 50px;
+                    margin-right:auto;
+                    border-radius:70%;
+                }
+                nav{
+                    display:flex;
+                    position:relative;
+                    align-items: center;
+                    padding: 0px 10%;
+                    justify-content: space-between;
+                    background-color: #948f8e;
+                    
+                }
+                .img{
+                    width: 50px;
+                    height:50px;
+                    border-radius:80%;
+                    cursor:pointer;
+                    margin-left:20px;
+                }
+                ul li{
+                    padding:20px;
+                    display:inline-block ;
+                    
+                }
+                li a{
+                    text-decoration: none;
+                    color:white;
+                }
+                .menu{
+                    position:absolute;
+                    background-color: #d3d3d0;
+                    width:230px;
+                    right:0%;
+                    top:100%;
+                    border-radius:2%;
+                    max-height: 0px;
+                    overflow: hidden;
+                }
+                .menu-open{
+                    max-height:400px;
+                }
+                .link{
+                    display: flex;
+                    text-decoration: none;
+                    align-items: center;
+                    margin: 3px;
+                    color: #525252;
+                }
+                .link p{
+                    width:100%
+                }
+                .link img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius:50%;
+                    padding: 5px;
+                    margin-right: 10px;
+                }
+                .link span{
+                    font-size:18px;
+                    transform: transform 0.5s;
+                }
+                .link:hover span{
+                    transform: translateX(3px);
+                }
+                .link:hover p{
+                    font-weight: 600;
+                }
+                .background{
+                    width:100%;
+                    height:100%;
+                }
+                .lift{
+                width:1669px;
+                height:919px;
+                }
+                h1{
+                    background:#ebe8e8;
+                    font-weight:bold;
+                    color:#2b2b2a;
+                    border-bottom: solid;
+                    padding: 10px;
+                    box-shadow: 20px 20px 5px #000a;
+                }
+            </style>
+        </head>
+
+        <body>
+            <div class="DIV">
+                <nav>
+                        <img src="LOGO.png" class="logo"/>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="index2.html">ABOUT ME</a></li>
+                            <li><a href="*">MY WORK</a></li>
+                        </ul>
+
+                        <img src="55555555.jpg" class="img" onclick="dillon();"/>
+                        
+                        <div class="menu" id="dillonOpen">
+
+                            <a href="#" class="link">
+                                    <img src="facebook.png" width="30px" height="30px">
+                                    <p>facebook</p>
+                                    <span>></span>
+                            </a>
+                            <a href="#" class="link">
+                                    <img src="instagram.png" width="30px" height="30px">
+                                    <p>instagram</p>
+                                    <span>></span>
+                            </a>
+                            <a href="#" class="link">
+                                    <img src="setting.png" >
+                                    <p>setting</p>
+                                    <span>></span>
+                            </a>
+                        </div>
+                </nav>
+            </div>
+            <div class="lift">
+                
+                <h1 style="position:absolute;top:370px;left:300px;font-size:36px">
+                    Welcome to my channel
+                </h1>
+                <h1 style="position:absolute;top:440px;left:370px;font-size:30px">
+                    My name is dillon .......
+                </h1>
+                
+                        <script>
+                            function dillon(){
+                                let dillonOpen = document.getElementById("dillonOpen");
+                                dillonOpen.classList.toggle("menu-open");
+                            }
+                        </script>
+        </body>
+    </html>

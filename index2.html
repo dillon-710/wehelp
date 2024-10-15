@@ -1,0 +1,170 @@
+<DOCTYPE html></DOCTYPE>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+            <meta charset="utf-8">
+            <title>text</title>
+            <style>
+                body{
+                    margin:0;
+                    
+                }
+                .logo{
+                    width: 50px;
+                    height: 50px;
+                    margin-right:auto;
+                    border-radius:70%;
+                }
+                nav{
+                    display:flex;
+                    position:relative;
+                    align-items: center;
+                    padding: 0px 10%;
+                    justify-content: space-between;
+                    background-color: #525252;
+
+                    
+                }
+                .img{
+                    width: 50px;
+                    height:50px;
+                    border-radius:80%;
+                    cursor:pointer;
+                    margin-left:20px;
+                }
+                ul li{
+                    padding:20px;
+                    display:inline-block ;
+                    
+                }
+                li a{
+                    text-decoration: none;
+                    color:white;
+                }
+                .menu{
+                    position:absolute;
+                    background-color: #d3d3d0;
+                    width:230px;
+                    right:0%;
+                    top:100%;
+                    border-radius:2%;
+                    max-height: 0px;
+                    overflow: hidden;
+                }
+                .menu-open{
+                    max-height:400px;
+                }
+                .link{
+                    display: flex;
+                    text-decoration: none;
+                    align-items: center;
+                    margin: 3px;
+                    color: #525252;
+                }
+                .link p{
+                    width:100%
+                }
+                .link img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius:50%;
+                    padding: 5px;
+                    margin-right: 10px;
+                }
+                .link span{
+                    font-size:18px;
+                    transform: transform 0.5s;
+                }
+                .link:hover span{
+                    transform: translateX(3px);
+                }
+                .link:hover p{
+                    font-weight: 600;
+                }
+                .background{
+                    width:100%;
+                    height:100%;
+                }
+                .blog{
+                    justify-content: start;
+                    background-color: rgb(253, 254, 255);
+                    width: 80%;
+                    text-align:start;
+                    margin:auto;
+                    margin-top: 10px;
+                    
+                }
+                p{
+                    margin:auto;
+                    width:80%;
+                    text-align:start;
+                    margin-left: 0px;
+                }
+                .site{
+                    font-weight: bold;
+                    font-size: 25px;
+                }
+            </style>
+        </head>
+
+        <body>
+            <div class="DIV">
+                <nav>
+                        <img src="LOGO.png" class="logo"/>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="index2.html">ABOUT ME</a></li>
+                        <li><a href="*">MY WORK</a></li>
+                    </ul>
+
+                        <img src="55555555.jpg" class="img" onclick="dillon();"/>
+                        
+                        <div class="menu" id="dillonOpen">
+
+                            <a href="#" class="link">
+                                    <img src="facebook.png" width="30px" height="30px">
+                                    <p>facebook</p>
+                                    <span>></span>
+                            </a>
+                            <a href="#" class="link">
+                                    <img src="instagram.png" width="30px" height="30px">
+                                    <p>instagram</p>
+                                    <span>></span>
+                            </a>
+                            <a href="#" class="link">
+                                    <img src="setting.png" >
+                                    <p>setting</p>
+                                    <span>></span>
+                            </a>
+                        </div>
+                </nav>
+            </div>
+            <div class="blog">
+                <div class="site">關於我</div>
+                <hr/>
+                <p>我叫蔡維倫,開南大學日文系畢業,在台商經銷商營業部擔任業務一年,後半年發現自己只有日文能力在這個環境下是相對難
+                    生存的,有一次在104無意間發現前端工程師的職位,並利用線上有的資源來學習,很幸運第一個在YT上找到是彭彭的課程,
+                    一開始利用下班閒置時間來學習Html、Css、Javascript到後來慢慢把學習加到可以負荷的時間、學習過程中不會排斥
+                    加上自己喜歡做讓自己很有成就感的事,而前端跟我本身的個性蠻符合的,輸入code上去馬上就能得到回饋,永遠有要挑戰
+                    的問題,我很嚮往,也深刻的知道理想跟現實是有差距的,但我相信只要抱持著初衷的心態,無論面對什麼挫折是可以迎刃而
+                    解的.
+                </p>
+                <div class="site">轉職心得</div>
+                <hr/>
+                <p>工作了一年後,讓我知道了現階段大環境下身上只有大學畢業日文一個技能是不夠用的,漸漸明白工作是為了什麼、自己重視什麼,現階段的我比起薪資成長更讓我嚮往的是自身的成長,能不能發揮出自身價值.
+                自學前端工程師三個月,過程中除了發現自身個性與這個領域很契合之外,我也明白這條路並不容易,需要學的東西很多、
+                面臨挫折該如何面對、如何解決問題,經過評估之後我開始認真尋找資源學習.
+                前端工程師的路途很長遠路也不平坦,但只要我做好不放棄的打算,時間拉到後面這些持續累積經驗和知識就是自身的價值.
+                </p>   
+            </div>
+            
+                
+                
+                        <script>
+                            function dillon(){
+                                let dillonOpen = document.getElementById("dillonOpen");
+                                dillonOpen.classList.toggle("menu-open");
+                            }
+                        </script>
+        </body>
+    </html>
