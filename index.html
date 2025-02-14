@@ -1,153 +1,618 @@
-<DOCTYPE html>
-    <html>
-        <head>
-            <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-            <meta charset="utf-8">
-            <title>text</title>
-            <style>
-                body{
-                    background: url(pexels-ifreestock-585752.jpg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    margin:0;
-                    
-                }
-                .logo{
-                    width: 50px;
-                    height: 50px;
-                    margin-right:auto;
-                    border-radius:70%;
-                }
-                nav{
-                    display:flex;
-                    position:relative;
-                    align-items: center;
-                    padding: 0px 10%;
-                    justify-content: space-between;
-                    background-color: #948f8e;
-                    
-                }
-                .img{
-                    width: 50px;
-                    height:50px;
-                    border-radius:80%;
-                    cursor:pointer;
-                    margin-left:20px;
-                }
-                ul li{
-                    padding:20px;
-                    display:inline-block ;
-                    
-                }
-                li a{
-                    text-decoration: none;
-                    color:white;
-                }
-                .menu{
-                    position:absolute;
-                    background-color: #d3d3d0;
-                    width:230px;
-                    right:0%;
-                    top:100%;
-                    border-radius:2%;
-                    max-height: 0px;
-                    overflow: hidden;
-                }
-                .menu-open{
-                    max-height:400px;
-                }
-                .link{
-                    display: flex;
-                    text-decoration: none;
-                    align-items: center;
-                    margin: 3px;
-                    color: #525252;
-                }
-                .link p{
-                    width:100%
-                }
-                .link img{
-                    width: 30px;
-                    height: 30px;
-                    border-radius:50%;
-                    padding: 5px;
-                    margin-right: 10px;
-                }
-                .link span{
-                    font-size:18px;
-                    transform: transform 0.5s;
-                }
-                .link:hover span{
-                    transform: translateX(3px);
-                }
-                .link:hover p{
-                    font-weight: 600;
-                }
-                .background{
-                    width:100%;
-                    height:100%;
-                }
-                .lift{
-                width:1669px;
-                height:919px;
-                }
-                h1{
-                    background:#ebe8e8;
-                    font-weight:bold;
-                    color:#2b2b2a;
-                    border-bottom: solid;
-                    padding: 10px;
-                    box-shadow: 20px 20px 5px #000a;
-                }
-            </style>
-        </head>
+<!DOCTYPE html>
+<html lang="en">
 
-        <body>
-            <div class="DIV">
-                <nav>
-                        <img src="LOGO.png" class="logo"/>
-                        <ul>
-                            <li><a href="index.html">HOME</a></li>
-                            <li><a href="index2.html">ABOUT ME</a></li>
-                            <li><a href="*">MY WORK</a></li>
-                        </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聲音照相管理系統</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link href="./styles.css" rel="stylesheet">
+  <link rel="icon" type="icon" href="otoconicon.png">
+</head>
 
-                        <img src="55555555.jpg" class="img" onclick="dillon();"/>
-                        
-                        <div class="menu" id="dillonOpen">
+<body>
 
-                            <a href="#" class="link">
-                                    <img src="facebook.png" width="30px" height="30px">
-                                    <p>facebook</p>
-                                    <span>></span>
-                            </a>
-                            <a href="#" class="link">
-                                    <img src="instagram.png" width="30px" height="30px">
-                                    <p>instagram</p>
-                                    <span>></span>
-                            </a>
-                            <a href="#" class="link">
-                                    <img src="setting.png" >
-                                    <p>setting</p>
-                                    <span>></span>
-                            </a>
-                        </div>
-                </nav>
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <!-- AsideContent -->
+      <aside class="col-2  p-0 border border-dark h-100vh" id="collapseAside">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <button class="btn btn-dark btn-lg w-100" style="border-radius: 0" ;>
+            選單
+          </button>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne">
+                噪音事件資料管理
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+              aria-labelledby="panelsStayOpen-headingOne">
+              <div class="accordion-body">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <button class="nav-link bnav active" id="v-pills-home-tab" data-bs-toggle="pilltog"
+                    data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                    aria-selected="true">符合噪音事件維護</button>
+                  <button class="nav-link bnav" id="v-pills-profile-tab" data-bs-toggle="pilltog"
+                    data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                    aria-selected="false">噪音計現場校正紀錄表</button>
+                </div>
+              </div>
             </div>
-            <div class="lift">
-                
-                <h1 style="position:absolute;top:370px;left:300px;font-size:36px">
-                    Welcome to my channel
-                </h1>
-                <h1 style="position:absolute;top:440px;left:370px;font-size:30px">
-                    My name is dillon .......
-                </h1>
-                
-                        <script>
-                            function dillon(){
-                                let dillonOpen = document.getElementById("dillonOpen");
-                                dillonOpen.classList.toggle("menu-open");
-                            }
-                        </script>
-        </body>
-    </html>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo">
+                統計報表分析查詢
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingTwo">
+              <div class="accordion-body">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <button class="nav-link bnav" id="v-pills-messages-tab" data-bs-toggle="pilltog"
+                    data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                    aria-selected="false">聲音照相稽查紀錄彙整</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </aside>
+
+      <!-- MainContent -->
+      <main class="col-10 p-0" id="main-content">
+        <div class="tab-content h-100 ">
+          <header class="d-flex border border-dark m-0">
+            <button id="toggleMen" class="btn" style="border-radius: 0" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseAside" aria-expanded="false" aria-controls="collapseAside">
+              ☰
+            </button>
+            <h2 class="text-center flex-grow-1">噪音事件維護系統</h2>
+          </header>
+          <!-- 符合噪音事件維護 -->
+          <div class="tab-pane mypane fade show active" id="v-pills-home" role="tabpanel">
+            <!-- 查詢表單 -->
+            <form class="container-fluid border-bottom border-dark" id="allForm">
+              <div class="row">
+                <!-- 站號 -->
+                <div class="col">
+                  <label for="station" class="form-label">站號</label>
+                  <select class="form-select" id="index">
+                    <option value="">請選擇</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- 站點 -->
+                <div class="col">
+                  <label for="site" class="form-label">站點</label>
+                  <select class="form-select" id="stationName">
+                    <option value="請選擇">請選擇</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- 日期範圍 -->
+                <div class="col">
+                  <label for="startDate" class="form-label ">日期</label>
+                  <div class="d-flex col-12">
+                    <input class="form-check-input mt-2 me-1 p-2" type="checkbox" id="checkDate">
+                    <input type="datetime-local" class="form-control me-2" value="2025-01-20T19:30" id="startDate" />
+                    <span class="d-flex align-items-center">至</span>
+                    <input type="datetime-local" class="form-control ms-2" value="2025-01-21T19:30" id="endDate" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-0 mb-2">
+                <!-- 車號 -->
+                <div class="col-2">
+                  <label for="carNumber" class="form-label">車號</label>
+                  <input type="text" class="form-control" id="carNumber" value="" placeholder="輸入車號" />
+
+                </div>
+                <div class="col-1 d-flex align-items-end">
+                  <button class="btn btn-primary form-control" id="searchBtn">查詢</button>
+                </div>
+                <div class="col-9 d-flex justify-content-md-start justify-content-lg-end align-items-end">
+                  <nav aria-label="Page navigation example w-100">
+                    <ul class="pagination m-0" id="page-link">
+                      <li class="page-item"><a class="page-link" href="#" id="prevPage">上一頁</a></li>
+                      <li class="page-item"><a class="page-link" href="#" id="nextPage">下一頁</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+
+            </form>
+            <!-- 表格內容 -->
+            <table class="table table-hover table-bordered border-secondary" id="myTable">
+              <thead>
+                <tr>
+                  <td>項次</td>
+                  <td>日期/時間</td>
+                  <td>站號</td>
+                  <td>車號</td>
+                  <td>噪音值</td>
+                  <td>背景音量</td>
+                  <td>瞬間風速</td>
+                  <td>氣溫</td>
+                  <td>管制標準</td>
+                  <td>修正後音量</td>
+                  <td>判定結果</td>
+                </tr>
+              </thead>
+              <tbody id="pagination_data">
+                <tr>
+                  <td>判定結果</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 噪音計現場校正紀錄表 -->
+          <div class="tab-pane mypane fade" id="v-pills-profile" role="tabpanel">
+            <!-- 查詢表單 -->
+            <form class="container-fluid border-bottom border-dark" id="allForm">
+              <div class="row">
+                <!-- 站號 -->
+                <div class="col">
+                  <label for="station" class="form-label">站號</label>
+                  <select class="form-select" id="index">
+                    <option value="">請選擇</option>
+                    <option value="TCEPB01">TCEPB01</option>
+                    <option value="TCEPB02">TCEPB02</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- 日期範圍 -->
+                <div class="col-8">
+                  <label for="startDate" class="form-label">校正時間</label>
+                  <div class="d-flex">
+                    <input class="form-check-input mt-2 me-1 p-2" type="checkbox" value="">
+                    <input type="datetime-local" class="form-control me-2" value="2025-01-20T19:30" id="startDate" />
+                    <span class="d-flex align-items-center">至</span>
+                    <input type="datetime-local" class="form-control ms-2" value="2025-01-21T19:30" id="endDate" />
+                    </input>
+                  </div>
+                </div>
+                <div class="col-4 d-flex align-items-end">
+                  <button class="btn btn-primary form-control" id="searchBtn">查詢</button>
+                </div>
+              </div>
+
+              <div class="row  mt-2 mb-2">
+                <nav aria-label="Page navigation example w-100">
+                  <ul class="pagination m-0">
+                    <li class="page-item"><a class="page-link" href="#">上一頁</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">下一頁</a></li>
+                  </ul>
+                </nav>
+              </div>
+
+            </form>
+            <!-- 表格內容 -->
+            <table class="table table-hover table-bordered border-secondary" id="myTable">
+              <thead>
+                <tr>
+                  <td>項次</td>
+                  <td>站號</td>
+                  <td>麥克風高度</td>
+                  <td>校正時間</td>
+                  <td>校正值</td>
+                  <td>校正人員</td>
+                  <td>氣溫</td>
+                  <td>瞬間風速</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>TCEPB05</td>
+                  <td>1.83</td>
+                  <td>2025/01/09 12:20:50</td>
+                  <td>93.4</td>
+                  <td>xxx</td>
+                  <td>19.8</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>TCEPB05</td>
+                  <td>1.83</td>
+                  <td>2025/01/09 12:20:50</td>
+                  <td>93.4</td>
+                  <td>xxx</td>
+                  <td>19.8</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 聲音照相稽查紀錄彙整 -->
+          <div class="tab-pane mypane fade" id="v-pills-messages" role="tabpanel">
+            <!-- 查詢表單 -->
+            <form class="container-fluid border-bottom border-dark" id="allForm">
+              <div class="row">
+                <!-- 站號 -->
+                <div class="col">
+                  <label for="station" class="form-label">站號</label>
+                  <select class="form-select" id="index">
+                    <option value="">請選擇</option>
+                    <option value="TCEPB01">TCEPB01</option>
+                    <option value="TCEPB02">TCEPB02</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- 站點 -->
+                <div class="col">
+                  <label for="site" class="form-label">站點</label>
+                  <select class="form-select" id="stationName">
+                    <option value="">請選擇</option>
+                    <option value="site1">站點1</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- 日期範圍 -->
+                <div class="col">
+                  <label for="startDate" class="form-label">值勤時間</label>
+                  <div class="d-flex">
+                    <input class="form-check-input mt-2 me-1 p-2" type="checkbox" value="" id="checkDate">
+                    <input type="datetime-local" class="form-control me-2" value="2025-01-20T19:30" id="startDate" />
+                    <span class="d-flex align-items-center">至</span>
+                    <input type="datetime-local" class="form-control ms-2" value="2025-01-21T19:30" id="endDate" />
+                    </input>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-0 mb-2">
+                <!-- 車號 -->
+                <div class="col-6">
+                  <label for="carNumber" class="form-label">車號</label>
+                  <input type="text" class="form-control" id="carNumber" placeholder="輸入車號" />
+
+                </div>
+                <div class="col-2 d-flex align-items-end">
+                  <button class="btn btn-primary form-control" id="searchBtn">查詢</button>
+                </div>
+                <div class="col-4  d-flex align-items-end justify-content-end">
+                  <nav aria-label="Page navigation example w-100">
+                    <ul class="pagination m-0">
+                      <li class="page-item"><a class="page-link" href="#">上一頁</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">下一頁</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+
+            </form>
+            <!-- 表格內容 -->
+            <table class="table table-hover table-bordered border-secondary" id="myTable">
+              <thead>
+                <tr>
+                  <td>項次</td>
+                  <td>日期/時間</td>
+                  <td>車號</td>
+                  <td>產製稽查紀錄表</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>2025/01/09 17:36:27</td>
+                  <td>848-R23</td>
+                  <td>產製紀錄表</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+  <!-- MouseDownMenu -->
+  <ul id="contextMenu" class="context-menu">
+    <li id="eventMaintenance" data-bs-toggle="modal" data-bs-target="#exampleModal">事件資料維護</li>
+    <li id="exportFiles">事件檔案匯出</li>
+    <li id="calculateVolume">計算背景音量</li>
+    <li id="updatePhoto">更新事件照片</li>
+  </ul>
+
+  <!-- Model -->
+  <div class="modal" id="exampleModal">
+    <div class="modal-dialog" style=" max-width: 1400px;">
+      <div class="modal-content bg-dark">
+        <div class="container-fluid h-100">
+          <div class="modal-header">
+            <h5 class="modal-title">model title</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <main class="row">
+            <article class="modal-body col-4 pb-0 pt-0 pe-3 ps-3 border-end">
+              <div class="d-flex pb-2">
+                <figure class="h-100  w-100 m-1">
+                  <!-- LeftImage -->
+                  <img style="width: 220px; height: 220px;" alt="Image" id="photoBtn1">
+                </figure>
+
+                <!-- RightButton -->
+                <div class="d-flex flex-column  w-50 ">
+                  <button type="button" class="btn btn-primary m-1 flex-grow-1" id="photoBtn">開啟照片</button>
+                  <button type="button" class="btn btn-primary m-1  flex-grow-1" id="carVideoBtn">車牌影像</button>
+                </div>
+                <div class="d-flex flex-column  w-50">
+                  <button type="button" class="btn btn-primary  m-1 flex-grow-1" id="peakBtn">峰值圖</button>
+                  <button type="button" class="btn btn-primary m-1 flex-grow-1" id="surroundVideoBtn">環景影像</button>
+                </div>
+              </div>
+              <!-- ChangeButton -->
+              <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">事件資訊</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">判定結果</button>
+                </li>
+              </ul>
+              <div class="tab-content pt-2" id="pills-tabContent">
+                <!-- 事件資訊 -->
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                  <table class="table table-bordered text-light" id="anotherTable">
+                    <tbody>
+                      <tr>
+                        <th>日期時間:</th>
+                        <td id="datetimeValue">2025/01/08 08:15:18</td>
+                      </tr>
+                      <tr>
+                        <th>單位:</th>
+                        <td>空氣品質及噪音管制科</td>
+                      </tr>
+                      <tr>
+                        <th>站號:</th>
+                        <td id="stationValue">TCEPB05</td>
+                      </tr>
+                      <tr>
+                        <th>地點:</th>
+                        <td id="locationValue">太平區光興路2288號附近</td>
+                      </tr>
+                      <tr>
+                        <th>車號:</th>
+                        <td class="d-flex">
+                          <div class="flex-grow-1" id="carnoValue">761-GXP</div>
+                          <button class="btn btn-outline-secondary" data-bs-toggle="modal"
+                            data-bs-target="#numberModal">變更號碼</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>噪音值</th>
+                        <td id="noiseValue">18.6</td>
+                      </tr>
+                      <tr>
+                        <th>背景音量</th>
+                        <td id="backgroundValue">18.6</td>
+                      </tr>
+                      <tr>
+                        <th>溫度</th>
+                        <td id="temperatureValue">18.6</td>
+                      </tr>
+                      <tr>
+                        <th>風速</th>
+                        <td id="windspeedValue">3m/s</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- 判定結果 -->
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                  <table class="table table-bordered text-light">
+                    <tbody>
+                      <tr>
+                        <td class="label-cell">前後三秒有車</td>
+                        <td class="value-cell">
+                          <input class="form-check-input" type="radio" name="noise" value="有車" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            有車
+                          </label>
+                          <input class="form-check-input" type="radio" name="noise" value="無車" id="flexRadioDefault2">
+                          <label class="form-check-label" for="flexRadioDefault">
+                            無車
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="label-cell">地面乾燥</td>
+                        <td class="value-cell">
+                          <input class="form-check-input" type="radio" name="wet" value="地乾" id="flexRadioDefault3">
+                          <label class="form-check-label" for="flexRadioDefault">
+                            地乾
+                          </label>
+                          <input class="form-check-input" type="radio" name="wet" id="flexRadioDefault4" value="地濕">
+                          <label class="form-check-label" for="flexRadioDefault">
+                            地濕
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="label-cell">風速小於5m/s</td>
+                        <td class="value-cell">
+                          <input class="form-check-input" type="checkbox" id="windlevel">
+                          <label class="form-check-label" for="flexRadioDefault">
+                            是
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="label-cell">最近降雨</td>
+                        <td class="value-cell">
+                          <input class="form-check-input mt-2 me-1 p-2" type="checkbox" id="rainday">
+                          <label class="form-check-label" for="flexRadioDefault">
+                            <input type="datetime-local" class="form-control" value="2025-01-20T19:30" id="date" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="label-cell">判定結果</td>
+                        <td class="value-cell">
+                          <input class="form-check-input" type="radio" name="determination" value="有效" id="valid">
+                          <label class="form-check-label" for="flexRadioDefault">
+                            有效
+                          </label>
+                          <input class="form-check-input" type="radio" name="determination" value="無效" id="invalid">
+                          <label class="form-check-label" for="flexRadioDefault">
+                            無效
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="label-cell">原因</td>
+                        <td class="value-cell">
+                          <select class="form-select form-select-lg" name="reason" id="reason">
+                            <option value="">請選擇原因</option>
+                            <option value="直接開罰">直接開罰</option>
+                            <option value="通知到檢">通知到檢</option>
+                            <option value="非噪音車">非噪音車</option>
+                            <option value="無法判定">無法判定</option>
+                            <option value="其他">其他</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="label-cell">備註說明</td>
+                        <td class="value-cell">
+                          <input type="text" class="form-control" name="detail" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" class="table text-center "><button type="button" class="btn btn-success btn-lg"
+                            id="saveButton">儲存判定結果</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </article>
+
+
+            <aside class="col-8 h-100 text-center background-color" id="mediaElement">
+
+              <img id="photo" alt="圖片" style="width: 900px;height: 700px;" />
+              <img id="peak" alt="圖片" style="display:none ;width: 900px;height: 700px;" />
+              <video id="carVideo" style="display:none ;width: 900px;height: 700px;" controls></video>
+              <video id="surroundVideo" style="display:none ;width: 900px;height: 700px;" controls></video>
+
+            </aside>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ChangNumberModal -->
+  <div class="modal " id="numberModal" tabindex="-1" style="max-height: 100vh;" aria-labelledby="numberModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl" style="min-height: 100vh;overflow: hidden;">
+      <div class=" modal-content bg-dark">
+        <div class="modal-header">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="container-fluid">
+            <main class="row">
+              <article class="modal-body col-4 border p-0">
+                <!-- 左上角表格 -->
+                <table class="table table-bordered  text-light mb-5" style="height: 60%;">
+                  <tbody>
+                    <tr>
+                      <th>日期時間:</th>
+                      <td id="datetimeValue_1">2025/01/08 08:15:18</td>
+                    </tr>
+                    <tr>
+                      <th>單位:</th>
+                      <td>空氣品質及噪音管制科</td>
+                    </tr>
+                    <tr>
+                      <th>站號:</th>
+                      <td id="stationValue_2">TCEPB05</td>
+                    </tr>
+                    <tr>
+                      <th>地點:</th>
+                      <td id="locationValue_3">太平區光興路2288號附近</td>
+                    </tr>
+                    <tr>
+                      <th>車號:</th>
+                      <td class="d-flex  align-items-stretch">
+                        <div class="flex-grow-1 d-flex align-items-center" id="carnoValue_4">761-GXP</div>
+                        <input class="flex-grow-1 d-flex align-self-stretch" placeholder="更變車號">
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>噪音值</th>
+                      <td id="noiseValue_5">18.6</td>
+                    </tr>
+                    <tr>
+                      <th>背景音量</th>
+                      <td id="backgroundValue_6">18.6</td>
+                    </tr>
+                    <tr>
+                      <th>溫度</th>
+                      <td id="temperatureValue_7">18.6</td>
+                    </tr>
+                    <tr>
+                      <th>風速</th>
+                      <td id="windspeedValue_8">3m/s</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="d-flex w-100 h-25">
+                  <button type="button" class="btn btn-primary  m-1 flex-grow-1">重新壓製</button>
+                  <button type="button" class="btn btn-primary m-1 flex-grow-1">儲存照片</button>
+                </div>
+              </article>
+              <aside class="col-8 h-100 text-center">
+                <div>
+                  <img id="sameImg" alt="Image" style="width: 660px;height: 350px;">
+                </div>
+                <div>
+                  <img src="#" alt="Image" style="width: 660px;height: 350px;">
+              </aside>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

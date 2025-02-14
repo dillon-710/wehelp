@@ -1,0 +1,35 @@
+    /* background-color */
+    body {
+      background-color: #fcfafa;
+      /* 設置淺顏色背景 */
+      height: 100vh;
+    }
+
+    /* 隱藏右鍵菜單 */
+    .context-menu {
+      display: none;
+      position: absolute;
+      list-style: none;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      z-index:       9999;
+    }
+
+    .context-menu li {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .context-menu li:hover {
+      background-color: #f0f0f0;
+    }
+
+
+    .page-item .page-link.active {
+      background-color: #007bff;  /* 背景顏色 */
+      color: white;  /* 活動頁文字顏色 */
+      font-weight: bold;  /* 文字為粗體 */
+      border-color: #007bff;  /* 邊框顏色 */
+    }
